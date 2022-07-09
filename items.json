@@ -1,0 +1,22 @@
+{
+    "items" : [
+        {
+            "id" : 1,
+            "title" : "Some Title 1",
+            "descriptions" : "Some Description 1",
+            "photo" : "croissant.jpg"
+        },
+        {
+            "id" : 2,
+            "title" : "Some Title 2",
+            "descriptions" : "Some Description 2",
+            "photo" : "salad.jpg"
+        },
+        {
+            "id" : 1,
+            "title" : "Some Title 3",
+            "descriptions" : "Some Description 3",
+            "photo" : "wok.jpg"
+        }
+    ]
+}
