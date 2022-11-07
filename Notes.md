@@ -46,7 +46,7 @@ commit 0d62cb24dce877911c6e55c4e135d664ede79efc
 
 ---
 
-## 8. Angular Templates
+## 8. Angular Templates and 9. Interfaces, types and generics in Angular
 
 - JSON Pipe in Angulat Template outputs Obejcts Content.
 
@@ -69,3 +69,18 @@ Welcome {{ object | json }}!
 Create ```interface``` as generic Type for your Backend Data.
 
 Use generic Type with ```HttpClien``` Angular service.
+
+commit 842a582a526f23a8411a4098a96c20539b2f63a9
+
+---
+
+## 10. Introducing RxJS to improve the code logic
+
+On subscribing RxJS Observable, often is forgoten to unsubscribe.
+
+Better way is to subscribe to RxJS Observables in Angular Templates using the ```async```Pipe.
+
+This will automaticaly unsubscribe the RxJS Observable
+
+
+---

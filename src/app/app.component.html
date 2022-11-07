@@ -1,5 +1,10 @@
-Welcome {{ items | json  }}!
-
-<div id="items_list">
-  <div *ngFor="let item of items"></div>
-</div>
+<ng-container *ngIf="(items$ | async) as items; else loading">
+    <div *ngFor="let item of items">
+      <h2>{{item.id}}. {{item.title}}</h2>
+      <p>{{item.descriptions}}</p>
+      <img src="http://127.0.0.1:3500/{{item.photo}}">
+    </div>
+</ng-container>
+<ng-template #loading>
+  Loading Items...
+</ng-template>

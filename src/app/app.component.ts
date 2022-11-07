@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { NgIfContext } from '@angular/common';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Item } from './models/item.model';
 import { ItemsService } from './services/items.service';
 
 @Component({
@@ -7,14 +10,12 @@ import { ItemsService } from './services/items.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  items!: Item[];
+  items$!: Observable<Item[]>;
   constructor(
     public itemsSvc: ItemsService,
   ) {}
 
   ngOnInit(): void {
-    this.itemsSvc.run().subscribe(
-      (data : Item[]) => this.items = data
-    )
+    this.items$ = this.itemsSvc.run();
   }
 }
