@@ -12,6 +12,6 @@ export class ItemsService {
   ) { }
 
   run() {
-    return this.httpClient.get('http://127.0.0.1:3000/items');
+    return this.httpClient.get<Item[]>('http://127.0.0.1:3000/items');
   }
 }

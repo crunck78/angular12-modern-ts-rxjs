@@ -7,15 +7,14 @@ import { ItemsService } from './services/items.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'start';
+  items!: Item[];
   constructor(
     public itemsSvc: ItemsService,
-  ) {
+  ) {}
 
-  }
   ngOnInit(): void {
     this.itemsSvc.run().subscribe(
-      data => console.log(data)
+      (data : Item[]) => this.items = data
     )
   }
 }
