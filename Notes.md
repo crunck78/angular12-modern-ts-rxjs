@@ -82,5 +82,12 @@ Better way is to subscribe to RxJS Observables in Angular Templates using the ``
 
 This will automaticaly unsubscribe the RxJS Observable
 
+commit 281824d13b900dc0e8f58b36f5584f9f48ecd217
+
+---
+
+## 11. Creating new component and adding routes via Router
+
+
 
 ---
