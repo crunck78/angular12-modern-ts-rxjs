@@ -12,7 +12,11 @@ export class ItemsService {
 
   ) { }
 
-  run() {
+  getItems$() {
     return this.httpClient.get<Item[]>('http://127.0.0.1:3000/items');
+  }
+
+  getItemById$(itemId : number){
+    return this.httpClient.get<Item>(`http://127.0.0.1:3000/items/${itemId}`);
   }
 }

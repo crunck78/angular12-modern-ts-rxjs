@@ -88,6 +88,12 @@ commit 281824d13b900dc0e8f58b36f5584f9f48ecd217
 
 ## 11. Creating new component and adding routes via Router
 
+commit 2899c1865a6009540ddc61be4970d2cfb84e2622
+
+---
+
+## 12. Router parameters && 13. New service for the single item
+
 
 
 ---

@@ -1,0 +1,10 @@
+<ng-container *ngIf="(item$ | async) as item; else loading">
+    <div class="item">
+        <h2>{{item.id}}. {{item.title}}</h2>
+        <p>{{item.descriptions}}</p>
+        <img src="http://127.0.0.1:3500/{{item.photo}}">
+    </div>
+</ng-container>
+<ng-template #loading>
+    Loading Item...
+</ng-template>

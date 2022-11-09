@@ -16,7 +16,7 @@ export class ListItemsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.items$ = this.itemsSvc.run();
+    this.items$ = this.itemsSvc.getItems$();
   }
 
 }
