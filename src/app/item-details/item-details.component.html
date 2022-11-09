@@ -4,6 +4,8 @@
         <p>{{item.descriptions}}</p>
         <img src="http://127.0.0.1:3500/{{item.photo}}">
     </div>
+
+    <button (click)="goBack()" >Back</button>
 </ng-container>
 <ng-template #loading>
     Loading Item...

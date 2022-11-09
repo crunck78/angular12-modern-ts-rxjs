@@ -94,6 +94,18 @@ commit 2899c1865a6009540ddc61be4970d2cfb84e2622
 
 ## 12. Router parameters && 13. New service for the single item
 
+commit a8465dbd69a5a46dce8fec7d6df16f4b4344d749
+
+---
+
+## 14. Inner linking and styling the application
+
+
+
+---
+
+## 15. Refactoring services using RxJs
+
 
 
 ---

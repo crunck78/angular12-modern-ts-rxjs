@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Router } from 'express';
-import { map, Observable } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { map, Observable, switchMap } from 'rxjs';
 import { Item } from '../models/item.model';
 import { ItemsService } from '../services/items.service';
 
@@ -14,13 +13,19 @@ export class ItemDetailsComponent implements OnInit {
 
   itemId$!: Observable<string | null>;
   item$!: Observable<Item>;
-  constructor(private route: ActivatedRoute, private itemsSvc : ItemsService) {}
+  constructor(private route: ActivatedRoute, private itemsSvc: ItemsService, private router: Router) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((pm)=>{
+    this.item$ = this.route.paramMap.pipe(
+      switchMap((pm) => {
         const id = +(pm.get('id') as string);
-        this.item$ = this.itemsSvc.getItemById$(id);
-    });
+        return this.itemsSvc.getItemById$(id);
+      })
+    );
+  }
+
+  goBack() {
+    this.router.navigate(['/']);
   }
 
 }

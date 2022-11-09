@@ -1,7 +1,16 @@
 :host{
-    display: block;
-
+    display: flex;
+    gap: 50px;
     .item{
+        text-decoration: none;
+        color: black;
+
+        box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.3);
+        border-radius: 12px;
+
+        &:hover{
+            transform: scale(1.1);
+        }
 
         img{
             display: block;
