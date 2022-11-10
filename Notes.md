@@ -106,6 +106,12 @@ commit a8465dbd69a5a46dce8fec7d6df16f4b4344d749
 
 ## 15. Refactoring services using RxJs
 
+commit 63e5716d140fcf527e390c3b4a00b9ed96156bb4
+
+---
+
+## 16. Angular forms and bindings
+
 
 
 ---

@@ -8,17 +8,21 @@ import { ItemsService } from './services/items.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ListItemsComponent } from './list-items/list-items.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { ProductFormComponent } from './product-form/product-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListItemsComponent,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ItemsService],
   bootstrap: [AppComponent]

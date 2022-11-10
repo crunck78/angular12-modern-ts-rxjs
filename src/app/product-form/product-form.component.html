@@ -1,0 +1,7 @@
+<h3>Add new Item</h3>
+<form>
+    <input [(ngModel)]="newItem.title" type="text" name="title" placeholder="title">
+    <input [(ngModel)]="newItem.descriptions" type="text" name="description" placeholder="description">
+    <img src="" alt="" class="uploadImg">
+    <button (click)="addItem()" >Add Item</button>
+</form>
