@@ -10,13 +10,15 @@ import { ListItemsComponent } from './list-items/list-items.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { FormsModule } from '@angular/forms';
+import { PreviewItemComponent } from './preview-item/preview-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListItemsComponent,
     ItemDetailsComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    PreviewItemComponent
   ],
   imports: [
     BrowserModule,

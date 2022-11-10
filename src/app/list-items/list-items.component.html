@@ -1,9 +1,6 @@
-<ng-container *ngIf="(items$ | async) as items; else loading">
-    <a routerLink="/item-details/{{item.id}}" class="item" *ngFor="let item of items">
-      <h2>{{item.title}}</h2>
-      <img src="http://127.0.0.1:3500/{{item.photo}}">
-    </a>
-</ng-container>
+<div class="items" *ngIf="(items$ | async) as items; else loading">
+    <app-preview-item *ngFor="let item of items" [item]="item"></app-preview-item>
+</div>
 <ng-template #loading>
   Loading Items...
 </ng-template>
