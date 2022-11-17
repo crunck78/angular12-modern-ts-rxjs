@@ -3,5 +3,6 @@
     <input [(ngModel)]="newItem.title" type="text" name="title" placeholder="title">
     <input [(ngModel)]="newItem.descriptions" type="text" name="description" placeholder="description">
     <img src="" alt="" class="uploadImg">
+    <input #imageInput type="file" accept="image/*" name="photo" (change)="readInput(imageInput)">
     <button (click)="addItem()" >Add Item</button>
 </form>
