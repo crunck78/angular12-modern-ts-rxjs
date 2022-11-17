@@ -124,6 +124,8 @@ commit b495bdcdf1d1485528b4c97d880607a87741ddac
 
 ## 18. Image upload preview within the template && 19. Add upload functionality to the Angular side
 
-
+commit 0a66eec559b853d29abf45656ac1cd3424f54b11
 
 ---
+
+## 20. Image upload on the NodeJS side & proxying CORS requests

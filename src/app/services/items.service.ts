@@ -47,7 +47,7 @@ export class ItemsService {
   }
 
   addItem(item: Item, selectedFile: File) {
-    this.uploadItemImage(selectedFile);
+    this.uploadItemImage(selectedFile).subscribe();
     this.addJsonItem(item).subscribe();
   }
 }
