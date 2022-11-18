@@ -129,3 +129,11 @@ commit 0a66eec559b853d29abf45656ac1cd3424f54b11
 ---
 
 ## 20. Image upload on the NodeJS side & proxying CORS requests
+
+commit 5c5aa8a8ac74eade041a4624a659f82a7e07b4a1
+
+---
+
+## 21. Debugging NodeJS server (optional)
+
+---
