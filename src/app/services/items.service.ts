@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable, switchMap } from 'rxjs';
 import { Item } from '../models/item.model';
 
 interface ImageService{
@@ -15,6 +15,8 @@ export class ItemsService {
   private itemsSubject = new BehaviorSubject<Item[]>([]);
   public items$: Observable<Item[]> = this.itemsSubject.asObservable();
 
+  cachedItems!: Item[];
+
   constructor(
     public httpClient: HttpClient
 
@@ -22,7 +24,10 @@ export class ItemsService {
 
   getItems$() {
     return this.httpClient.get<Item[]>('http://127.0.0.1:3000/items')
-      .subscribe(items => this.itemsSubject.next(items));
+      .subscribe(items => {
+        this.cachedItems = items;
+        this.itemsSubject.next(items);
+      });
   }
 
   getItemById$(itemId: number) {
@@ -47,7 +52,15 @@ export class ItemsService {
   }
 
   addItem(item: Item, selectedFile: File) {
-    this.uploadItemImage(selectedFile).subscribe();
-    this.addJsonItem(item).subscribe();
+    return this.uploadItemImage(selectedFile).pipe(
+      switchMap((itemUrl : string) => {
+        item.photo = itemUrl;
+        return this.addJsonItem(item);
+      })
+    ).subscribe((data) => {
+      this.cachedItems.push(data);
+      this.itemsSubject.next(this.cachedItems);
+    });
+
   }
 }
