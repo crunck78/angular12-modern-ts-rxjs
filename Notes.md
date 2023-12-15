@@ -142,6 +142,14 @@ commit 2819a18ed4c849e9a38a375089c2ea1ab45e5837
 
 ## 22. Finalizing the project
 
+commit 3776ee159fbcb437bf45c20a8df41628e2db574f
+
+---
+
+# Section 2: From Vanilla Javascript to Typescript & Angular
+
+## 23. Project overview and setup
+
 
 
 ---
